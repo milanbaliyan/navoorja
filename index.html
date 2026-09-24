@@ -5,21 +5,26 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Navoorja Neurotherapy Centre</title>
   <meta name="description" content="Navoorja Neurotherapy Centre — drug-free, natural healing through neurotherapy. Relief from back pain, migraine, stress, digestive and hormonal problems.">
+  <link rel="icon" type="image/png" href="assets/favicon.png">
+  <link rel="apple-touch-icon" href="assets/favicon.png">
+  <meta name="theme-color" content="#1c7a3f">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,500;9..144,600&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <style>
     :root {
-      --bg: #fbf8f3;
+      --bg: #f3faf4;
       --surface: #ffffff;
-      --surface-alt: #f2ede4;
-      --text: #1f2a2a;
-      --muted: #5b6766;
-      --primary: #2f6f62;
-      --primary-dark: #1f4f45;
-      --primary-soft: #e3efeb;
-      --accent: #c9853f;
-      --border: #e4ddd1;
+      --surface-alt: #e6f4e8;
+      --text: #16261c;
+      --muted: #4f6356;
+      --primary: #1c7a3f;
+      --primary-dark: #0b6032;
+      --primary-light: #3f9435;
+      --primary-soft: #dcf0e0;
+      --accent: #f5821f;
+      --accent-soft: #fff2e3;
+      --border: #cfe6d5;
       --radius: 14px;
       --shadow: 0 10px 30px rgba(31, 42, 42, .08);
       --max: 1140px;
@@ -30,6 +35,10 @@
     body {
       font-family: "Inter", system-ui, -apple-system, sans-serif;
       background: var(--bg);
+      background-image:
+        radial-gradient(900px 420px at 12% 0%, rgba(63, 148, 53, .10), transparent 65%),
+        radial-gradient(760px 380px at 92% 22%, rgba(245, 130, 31, .07), transparent 62%);
+      background-attachment: fixed;
       color: var(--text);
       line-height: 1.65;
       font-size: 16px;
@@ -64,15 +73,13 @@
     /* Header */
     header {
       position: sticky; top: 0; z-index: 50;
-      background: rgba(251, 248, 243, .92); backdrop-filter: blur(10px);
+      background: #ffffff;
       border-bottom: 1px solid var(--border);
+      box-shadow: 0 1px 12px rgba(11, 96, 50, .06);
     }
     .nav { display: flex; align-items: center; justify-content: space-between; height: 72px; }
     .logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
-    .logo-mark {
-      width: 40px; height: 40px; border-radius: 50%; background: var(--primary);
-      display: grid; place-items: center; color: #fff;
-    }
+    .logo-mark { display: block; height: 40px; width: auto; }
     .logo-text { font-family: "Fraunces", serif; font-size: 20px; font-weight: 600; line-height: 1.1; }
     .logo-text small { display: block; font-family: "Inter", sans-serif; font-size: 11px; font-weight: 500; color: var(--muted); letter-spacing: .08em; text-transform: uppercase; }
     .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
@@ -84,12 +91,12 @@
     /* Hero */
     .hero {
       position: relative; padding: 0; min-height: 88vh; display: flex; align-items: center;
-      background: linear-gradient(100deg, rgba(20, 45, 40, .88) 0%, rgba(20, 45, 40, .55) 55%, rgba(20, 45, 40, .15) 100%),
+      background: linear-gradient(100deg, rgba(8, 56, 30, .90) 0%, rgba(14, 84, 44, .62) 55%, rgba(63, 148, 53, .20) 100%),
                   url("https://images.unsplash.com/photo-1519823551278-64ac92734fb1?w=1800&q=80") center/cover no-repeat;
       color: #fff;
     }
     .hero-content { max-width: 620px; padding: 80px 0; }
-    .hero .eyebrow { color: #f0c894; }
+    .hero .eyebrow { color: #ffc182; }
     .hero h1 { font-size: clamp(36px, 6vw, 60px); margin-bottom: 20px; }
     .hero p { font-size: 18px; opacity: .92; margin-bottom: 32px; }
     .hero-actions { display: flex; gap: 14px; flex-wrap: wrap; }
@@ -121,7 +128,8 @@
     }
     .benefit:hover { transform: translateY(-4px); box-shadow: var(--shadow); }
     .benefit-icon {
-      width: 52px; height: 52px; border-radius: 12px; background: var(--primary-soft);
+      width: 52px; height: 52px; border-radius: 12px;
+      background: linear-gradient(135deg, var(--primary-soft), #eaf7ec);
       color: var(--primary); display: grid; place-items: center; margin-bottom: 18px;
     }
     .benefit h3 { font-size: 20px; margin-bottom: 8px; }
@@ -199,7 +207,7 @@
 
     /* Contact */
     .contact { background: var(--primary-dark); color: #fff; }
-    .contact .eyebrow { color: #f0c894; }
+    .contact .eyebrow { color: #ffc182; }
     .contact .section-head p { color: rgba(255,255,255,.75); }
     .contact-grid { display: grid; grid-template-columns: 1fr 1.2fr; gap: 40px; }
     .contact-cards { display: grid; gap: 16px; }
@@ -217,7 +225,7 @@
     .map { border-radius: var(--radius); overflow: hidden; min-height: 380px; }
     .map iframe { width: 100%; height: 100%; min-height: 380px; border: 0; display: block; }
 
-    footer { background: #173a33; color: rgba(255,255,255,.7); padding: 28px 0; font-size: 14px; }
+    footer { background: var(--primary-dark); color: rgba(255,255,255,.72); padding: 28px 0; font-size: 14px; }
     footer .container { display: flex; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
     .disclaimer { font-size: 13px; color: var(--muted); text-align: center; max-width: 760px; margin: 40px auto 0; }
 
@@ -239,9 +247,11 @@
       section { padding: 64px 0; }
       .container { padding: 0 16px; }
       .menu-toggle { display: block; }
+      .logo-mark { height: 32px; }
+      .logo-text { font-size: 18px; }
       .nav-links {
         position: absolute; top: 72px; left: 0; right: 0; flex-direction: column; gap: 0;
-        background: var(--bg); border-bottom: 1px solid var(--border); display: none; padding: 8px 16px 20px;
+        background: #ffffff; border-bottom: 1px solid var(--border); display: none; padding: 8px 16px 20px;
       }
       .nav-links.open { display: flex; }
       .nav-links li { width: 100%; }
@@ -262,9 +272,7 @@
 <header>
   <div class="container nav">
     <a href="#home" class="logo" aria-label="Navoorja home">
-      <span class="logo-mark">
-        <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2C8 6 6 9.5 6 13a6 6 0 0 0 12 0c0-3.5-2-7-6-11z"/><path d="M12 22v-8"/><path d="M9 16l3-2 3 2"/></svg>
-      </span>
+      <img class="logo-mark" src="assets/logo-mark.png" alt="" width="90" height="40" decoding="async">
       <span class="logo-text">Navoorja<small>Neurotherapy Centre</small></span>
     </a>
     <button class="menu-toggle" aria-label="Open menu" aria-expanded="false">
@@ -507,7 +515,7 @@
         <div class="contact-cards">
           <div class="contact-card">
             <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13S3 17 3 10a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></span>
-            <div><h3>Address</h3><p>Navoorja Neurotherapy Centre<br>123, Wellness Street, Sector 15<br>New Delhi, Delhi 110001</p></div>
+            <div><h3>Address</h3><p>Navoorja Neurotherapy Centre<br>Gali No. 13, Ram Gopal Colony<br>Near Sector 3-4 Pulia, Rohtak<br>Haryana</p></div>
           </div>
           <div class="contact-card">
             <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1.9.4 1.8.7 2.7a2 2 0 0 1-.5 2.1L8 9.8a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.7.7a2 2 0 0 1 1.7 2z"/></svg></span>
@@ -515,16 +523,16 @@
           </div>
           <div class="contact-card">
             <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-10 6L2 7"/></svg></span>
-            <div><h3>Email</h3><a href="mailto:info@navoorja.com">info@navoorja.com</a></div>
+            <div><h3>Email</h3><a href="mailto:milanbaliyan42@gmail.com">milanbaliyan42@gmail.com</a></div>
           </div>
           <div class="contact-card">
             <span class="ic"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="M12 6v6l4 2"/></svg></span>
-            <div><h3>Timings</h3><p>Mon – Sat: 9:00 AM – 1:00 PM, 4:00 PM – 8:00 PM<br>Sunday: Closed</p></div>
+            <div><h3>Timings</h3><p>All days: 10:00 AM – 5:00 PM</p></div>
           </div>
         </div>
         <div class="map">
           <iframe title="Centre location on map" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
-            src="https://www.google.com/maps?q=Connaught+Place,+New+Delhi&output=embed"></iframe>
+            src="https://www.google.com/maps?q=Ram+Gopal+Colony,+Sector+3-4+Pulia,+Rohtak,+Haryana&output=embed"></iframe>
         </div>
       </div>
     </div>
